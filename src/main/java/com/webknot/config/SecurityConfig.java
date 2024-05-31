@@ -54,6 +54,12 @@ public class SecurityConfig {
                 .requestMatchers("/users/signup").permitAll()
                 .requestMatchers("/authenticate", "/register").permitAll()
                 .requestMatchers("/users/signin").permitAll()
+                .requestMatchers("/employees/**").permitAll()
+                .requestMatchers("/projects/**").permitAll()
+                .requestMatchers("/projects/add").permitAll()
+                .requestMatchers("employees/add").permitAll()
+                .requestMatchers("projects").permitAll()
+                .requestMatchers("employees").permitAll()
 
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .anyRequest().authenticated();
