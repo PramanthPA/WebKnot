@@ -60,6 +60,7 @@ public class SecurityConfig {
                 .requestMatchers("employees/add").permitAll()
                 .requestMatchers("projects").permitAll()
                 .requestMatchers("employees").permitAll()
+                .requestMatchers("leaves/apply").permitAll()
 
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .anyRequest().authenticated();

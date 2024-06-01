@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -24,6 +25,8 @@ public class Project {
     private String endClient;
     private String projectDescription;
     private String projectStatus;
+    private LocalDate startDate;
+    private LocalDate endDate;
 
     @ManyToOne
     private Employee accountManager;
